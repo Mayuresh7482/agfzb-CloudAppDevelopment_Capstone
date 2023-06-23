@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dealership Review</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+    <body>
+
+    <!--Add a nav bar here -->
+    {% for review in reviews %}
+    <div class="review">
+        <h3>{{ review.name }}</h3>
+        <p>Review: {{ review.review }}</p>
+        <p>Purchase: {{ review.purchase }}</p>
+        <p>Purchase Date: {{ review.purchase_date }}</p>
+        <p>Car: {{ review.car_make }} {{ review.car_model }} {{ review.car_year }}</p>
+        <p>Sentiment: {{ review.sentiment }}</p>
+    </div>
+{% endfor %}
+
+    <!-- Add reviews as cards -->
+
+    </body>
+
+</html>
